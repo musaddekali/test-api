@@ -1,5 +1,6 @@
 import  express  from "express";
 import userRouters from './routes/users.js'
+import githubRouters from './routes/github.js'
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -11,6 +12,7 @@ app.get("/", (req,res) => {
 })
 
 app.use('/api', userRouters)
+app.use('/api', githubRouters)
 
 app.listen(port, () => {
   console.log(`App is listening on http://localhost:${port}`);
