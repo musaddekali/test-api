@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import  express  from "express";
 import userRouters from './routes/users.js'
 import githubRouters from './routes/github.js'
