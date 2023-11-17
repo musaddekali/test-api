@@ -32,7 +32,6 @@ export default class UserControllers {
       return;
     }
     const signleUser = users.find((user) => user.id == userId);
-    const { name, age } = signleUser || {};
     if (!signleUser) {
       res.status(404).send(`User ${userId} is not found`);
       return;
