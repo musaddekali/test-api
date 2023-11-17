@@ -1,13 +1,12 @@
 import  express  from "express";
 import { homeControllers } from "../controllers/homeControllers.js";
-import { usersControllers } from "../controllers/usersControlles.js";
-import { usersPostControllers } from "../controllers/usersPostControllers.js";
+import UserControllers from '../controllers/usersControlles.js'
 const router = express.Router();
 
 router.get("/", homeControllers);
 
-router.get("/users", usersControllers);
+router.get("/users", UserControllers.getAllUsers);
 
-router.post("/users", usersPostControllers);
+router.post("/users", UserControllers.createUser);
 
 export default router;
