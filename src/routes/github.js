@@ -1,7 +1,7 @@
-import  express  from "express";
-import githubControllers from "../controllers/githubControllers.js";
+import express from 'express';
+import GithubControllers from '../controllers/githubControllers.js';
 const router = express.Router();
 
-router.get("/github", githubControllers);
+router.get('/github', GithubControllers.getGithubUser);
 
 export default router;

@@ -1,4 +1,5 @@
-const githubUser = {
+const githubControllers = (req, res) => {
+  const githubUser = {
     login: "musaddekali",
     id: 83631326,
     node_id: "MDQ6VXNlcjgzNjMxMzI2",
@@ -35,8 +36,7 @@ const githubUser = {
     created_at: "2021-05-04T05:55:32Z",
     updated_at: "2023-11-12T04:29:00Z",
   };
-export default class GithubControllers {
-    static getGithubUser(req, res) {
-        res.json(githubUser);
-    }
-}
+  res.json(githubUser);
+};
+
+export default githubControllers;
