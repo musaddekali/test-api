@@ -41,13 +41,23 @@ export default class UserControllers {
   }
 
   static createUser(req, res) {
-    const { name, email } = req.body || {};
-    if (!name || !email) {
+    const user = req.body || {};
+    if (!user.name || !user.email) {
       res.status(303).send("Name or Email not valid.");
       return;
     }
-    res.send(`New user created. User name: ${name} and email: ${email}`);
+    res.send(
+      `New user created. User name: ${user.name} and email: ${user.email}`
+    );
   }
+  // static createUser(req, res) {
+  //   const { name, email } = req.body || {};
+  //   if (!name || !email) {
+  //     res.status(303).send("Name or Email not valid.");
+  //     return;
+  //   }
+  //   res.send(`New user created. User name: ${name} and email: ${email}`);
+  // }
 
   static updateUser(req, res) {
     res.send("User Updated");

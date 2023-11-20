@@ -1,5 +1,5 @@
 import express from 'express';
-import FileControllers from '../controllers/FileControllers.js';
+import FileControllers from '../controllers/fileControllers.js'
 const router = express.Router();
 
 router.get('/file/:name', FileControllers.getImage);
