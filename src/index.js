@@ -8,7 +8,7 @@ import fileRouters from "./routes/files.js";
 import homeRouters from "./routes/home.js";
 import apiHomeRouters from "./routes/apiHome.js";
 import { fileURLToPath } from "url";
-import databaseRun from "./db/dbConnection.js"
+import dbConnection from "./db/dbConnection.js"
 
 const app = express();
 app.use(express.json());
@@ -23,7 +23,7 @@ app.use("/api", githubRouters);
 app.use("/api", fileRouters);
 
 // RUN DATABASE
-databaseRun();
+dbConnection();
 
 app.listen(port, () => {
   console.log(`App is running on http://localhost:${port}`);

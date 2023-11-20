@@ -3,7 +3,7 @@ import { MongoClient } from "mongodb";
 const uri = "mongodb://localhost:27017";
 const client = new MongoClient(uri);
 
-export default async function databaseRun() {
+export default async function dbConnection() {
     try {
       await client.connect();
       console.log("database connected successfully!");
