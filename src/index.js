@@ -19,7 +19,7 @@ app.use("/", homeRouters);
 app.use("/api", apiHomeRouters);
 app.use("/api", userRouters);
 app.use("/api", githubRouters);
-app.use("/api", fileRouters);
+// app.use("/api", fileRouters);
 
 app.listen(port, () => {
   console.log(`App is running on http://localhost:${port}`);
